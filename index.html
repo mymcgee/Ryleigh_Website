@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0f2a22">
+  <title>For Ryleigh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <noscript>
+    <p style="padding:2rem;text-align:center;color:#ffd5e5;font-family:sans-serif">
+      This site needs JavaScript turned on to open. Try a different browser, myry.
+    </p>
+  </noscript>
+
+  <!-- ============ INTRO (only plays on her birthday) ============ -->
+  <div id="intro" class="intro" hidden>
+    <div class="hearts-layer" aria-hidden="true"></div>
+    <div class="ovals-layer" aria-hidden="true"></div>
+    <h1 class="birthday-title">Happy birthday<br>Ryleigh!!</h1>
+    <button id="skip-intro" class="skip" type="button">Skip</button>
+  </div>
+
+  <!-- ============ GATE ============ -->
+  <main id="gate" class="screen gate" hidden>
+    <p id="gate-banner" class="gate-banner" hidden>Happy birthday Ryleigh!!</p>
+    <div class="gate-inner">
+      <h1 id="gate-title" class="gate-title">Okay so boom, to access this website you must answer the following question: Who loves the other person more?</h1>
+      <p id="gate-hint" class="gate-hint" aria-live="polite"></p>
+      <div class="gate-buttons">
+        <button id="btn-myles" class="btn btn-pink" type="button">Myles loves Ryleigh more</button>
+        <div id="ry-slot" class="btn-slot">
+          <button id="btn-ryleigh" class="btn btn-ghost" type="button">Ryleigh loves Myles more</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ============ MAIN SITE ============ -->
+  <div id="site" hidden>
+
+    <header class="hero">
+      <h1 id="hero-title" class="hero-title">You Made It <3, Myles loves you Ryleigh</h1>
+      <p class="hero-sub">Everything on this page is for Ryleigh. If you are Ryleigh, keep scrolling.</p>
+    </header>
+
+    <!-- Things she likes -->
+    <section class="section" id="likes">
+      <h2 class="section-title">Things im sure you like</h2>
+      <p class="section-note">Hoping I get to add to this list later</p>
+      <div class="likes-grid">
+        <div class="like like--palette">
+          <div class="swatches" aria-hidden="true">
+            <span class="swatch swatch--green"></span>
+            <span class="swatch swatch--pink"></span>
+            <span class="swatch swatch--blue"></span>
+          </div>
+          <p class="like-title">Dark green, pink, and blue</p>
+          <p class="like-sub">Your colors, so they are all over this site.</p>
+        </div>
+        <div class="like"><span class="like-icon" aria-hidden="true">🚗</span><p class="like-title">'67 Chevy Impala</p><p class="like-sub">the dream car</p></div>
+        <div class="like"><span class="like-icon" aria-hidden="true">🫐</span><p class="like-title">Blueberries</p><p class="like-sub">your favorite</p></div>
+        <div class="like"><span class="like-icon" aria-hidden="true">🐶</span><p class="like-title">Dalmatians</p><p class="like-sub">starting with Sunday</p></div>
+        <div class="like"><span class="like-icon" aria-hidden="true">🦝</span><p class="like-title">Cute raccoons</p><p class="like-sub">i dunno why you like them so much</p></div>
+        <div class="like"><span class="like-icon" aria-hidden="true">🍷</span><p class="like-title">Red wine</p><p class="like-sub">your favorite, starting to like it now</p></div>
+        <div class="like"><span class="like-icon" aria-hidden="true">🍬</span><p class="like-title">Pixie sticks</p><p class="like-sub">you pointed them out in Dollar Tree</p></div>
+        <div class="like"><span class="like-icon" aria-hidden="true">🕯️</span><p class="like-title">Candles</p><p class="like-sub">cuz they smell good</p></div>
+        <div class="like"><span class="like-icon" aria-hidden="true">🧴</span><p class="like-title">YSL perfume</p><p class="like-sub">you said you liked them one time</p></div>
+        <div class="like like--wide"><span class="like-icon" aria-hidden="true">🍗🍟</span><p class="like-title">Your chicken fingers and fries</p><p class="like-sub">lol</p></div>
+      </div>
+    </section>
+
+    <!-- Inside jokes -->
+    <section class="section" id="jokes">
+      <h2 class="section-title">I miss you most...</h2>
+      <p class="section-note">Play along... please</p>
+
+      <div class="game">
+        <div id="thread" class="thread" aria-live="polite"></div>
+        <div class="game-bar">
+          <button id="miss-btn" class="btn btn-pink" type="button">I miss you</button>
+          <span id="round-count" class="round-count">Round 0</span>
+        </div>
+      </div>
+
+      <div class="game game--hungry">
+        <p id="hungry-reply" class="hungry-reply" aria-live="polite">Feeling something?</p>
+        <button id="hungry-btn" class="btn btn-ghost btn-small" type="button">I'm hungry</button>
+      </div>
+    </section>
+
+    <!-- Photos -->
+    <section class="section" id="photos">
+      <h2 class="section-title">Photos together</h2>
+      <p class="section-note">Click on the photo and it flips dum dum</p>
+      <div class="polaroids">
+
+        <div class="polaroid" role="button" tabindex="0" aria-pressed="false" aria-label="Photo from Dollar Tree in July 2026. Tap to flip.">
+          <div class="flip">
+            <div class="face front">
+              <img src="images/sunglasses.jpg" alt="You and me in a mirror at Dollar Tree, both wearing sunglasses" style="--ar: 3 / 4" loading="lazy">
+              <p class="label">Dollar Tree, July 2026</p>
+            </div>
+            <div class="face back">
+              <p>Our first time hanging out one on one. We went to Dollar Tree to find some things for slime.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="polaroid" role="button" tabindex="0" aria-pressed="false" aria-label="Photo of us asleep on FaceTime in August 2026. Tap to flip.">
+          <div class="flip">
+            <div class="face front">
+              <img src="images/apart.jpg" alt="Screenshots of you and me asleep on a FaceTime call" style="--ar: 700 / 776" loading="lazy">
+              <p class="label">FaceTime nights, August 2026</p>
+            </div>
+            <div class="face back">
+              <p>You left me to go to Africa, so we slept on the phone together.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="polaroid" role="button" tabindex="0" aria-pressed="false" aria-label="Photo of you, me, and Sunday. Tap to flip.">
+          <div class="flip">
+            <div class="face front">
+              <img src="images/sunday.jpg" alt="You and me together, with Sunday the dalmatian's collar in the corner" style="--ar: 11 / 6" loading="lazy">
+              <p class="label">Me, you, and Sunday</p>
+            </div>
+            <div class="face back">
+              <p>Me, you, and Sunday taking photos to see what audio TikTok would pick for us.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section class="section" id="music">
+      <h2 class="section-title">Our shared playlist that we should probably change the title of</h2>
+      <p class="section-note">Thirty songs so far. These are my favorites.</p>
+      <ul id="favorites" class="favorites"></ul>
+
+      <details class="all-songs">
+        <summary>See all 30 songs</summary>
+        <ol id="playlist" class="playlist"></ol>
+      </details>
+
+      <p class="music-link-row">
+        <a id="apple-link" class="btn btn-pink" href="#" target="_blank" rel="noopener" hidden>Open it on Apple Music</a>
+      </p>
+    </section>
+
+    <!-- Letter -->
+    <section class="section" id="letter-section">
+      <h2 class="section-title">A letter I wrote while you were in Kenya</h2>
+      <p class="section-note">If you click on the envelope, it opens... dum dum</p>
+
+      <button id="envelope" class="envelope" type="button" aria-expanded="false" aria-controls="letter-wrap">
+        <span class="seal" aria-hidden="true"></span>
+        <span class="envelope-text">For Ryleigh</span>
+      </button>
+
+      <div id="letter-wrap" class="letter-wrap">
+        <div class="letter-clip">
+          <article class="letter" id="letter">
+            <p>I keep telling you that I don’t know if I love you, but I’m starting to think that isn’t the truth. I’m not the best at explaining my emotions. Honestly, I was never an emotional person until you came into my life. After you left, I found myself crying like a toddler when I thought about you. I would think about how it felt to lie down next to you, hold you close to me, and feel your body with my hands. You showed me a love I had never felt or experienced before, and because of that I sobbed when you left. I had such a beautiful image in front of me, a breathtaking view that I can’t put into words. I felt so at ease when I was next to you, like I belonged there and didn’t want to be anywhere else.</p>
+
+            <p>I think about the time we lied down on the road together while you tried to look at the stars with your weak vision. I think about watching the Grinch with you until the sun came up because you wanted me to stay awake with you. I think about running my fingers through your hair, tangling it, and you still wanting me to continue. I think about you resting your head on my chest. I even think about the way your eyes softened when you looked at me. In my past “relationships,” and I use that term lightly, I would force myself to make a move, hold her hand, or put my arm over her shoulder. But with you nothing was forced. I was simply acting on what my body wanted in the moment. I am so drawn to you that everything came naturally, I couldn’t get enough of you and I still can’t even though you’re miles away.</p>
+
+            <p>I’ve never had feelings this strong for anyone in my life, and that has to mean something. I used to tell myself “oh, it’s because I miss her” whenever I got these intense cravings for your presence, but I think it’s more than that. Yes, I miss you and I cannot wait to see you again, but this feeling is different. It’s not always a sad, empty feeling. Sometimes it’s warm and comforting. I’ll see something that reminds me of you and think “I would love to experience this with Ryleigh,” and it makes me so happy. Yes, most of the time when I think of you I get sad that you’re not with me, but I’m also so happy that I get to experience my life with such a gorgeous, smart, goal oriented woman who loves me for me. I’m so happy I found someone I can sit and do absolutely nothing with and still have the best time of my life, because I’m spending it with you.</p>
+
+            <p>I am so happy that we are together, and I know it’s early on in our relationship, but I love you so much, and I mean it this time. If love means finding everything about someone beautiful, always wanting to learn more about them, or feeling like nothing puts you in a better mood than seeing them smile, then I have never been more helplessly in love than I am with you. I want you to know that I love you more than anyone else on this earth, and I will hold you deeply in my heart until I’m dead and buried. I love you so much, and I love everything about you. God couldn’t have blessed me with a more perfect woman, and I couldn’t be more grateful.</p>
+
+            <p class="signoff">Love, Myles</p>
+          </article>
+        </div>
+      </div>
+
+      <div class="finale">
+        <button id="finale-btn" class="btn btn-pink" type="button" hidden>One more thing</button>
+        <p id="finale-message" class="finale-message" hidden></p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- floating "reassuring words" bubble that changes as she scrolls -->
+  <div id="whisper" class="whisper" aria-hidden="true"><span id="whisper-text">I miss myry</span></div>
+
+  <!-- the pink heart that grows over the screen -->
+  <div id="heart-wipe" class="heart-wipe" aria-hidden="true">
+    <svg viewBox="0 0 24 24" width="120" height="120"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+  </div>
+
+  <!-- hearts bursts and falling snacks get drawn here -->
+  <div id="fx-layer" class="fx-layer" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
